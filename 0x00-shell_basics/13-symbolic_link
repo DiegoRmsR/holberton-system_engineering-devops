@@ -1,2 +1,2 @@
 #!/bin/bash
-which /bin/__ls__
+which /bin/ls ./bin/__ls__
