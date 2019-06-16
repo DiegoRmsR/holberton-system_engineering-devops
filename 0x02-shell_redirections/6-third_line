@@ -1,2 +1,2 @@
 !#/bin/bash
-sed -n '3 p' iacta
+head -3 f1 | tail -1
