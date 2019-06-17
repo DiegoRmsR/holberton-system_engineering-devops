@@ -1,2 +1,2 @@
 #!/bin/bash
-grep -type d PATH | wc -11111111111l
+echo $PATH |tr : \ | wc -w
