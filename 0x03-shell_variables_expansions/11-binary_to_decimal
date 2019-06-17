@@ -1,2 +1,2 @@
 #!/bin/bash
-echo $((BINARY**+6))
+echo $((BINARY#10))
