@@ -1,2 +1,3 @@
 #!/bin/bash
-echo printenv | wc -w
+printenv | wc -l
+
