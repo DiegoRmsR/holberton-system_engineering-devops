@@ -1,2 +1,2 @@
 #!/bin/bash
-printenv | wc -l
+printenv | less
