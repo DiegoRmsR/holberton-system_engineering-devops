@@ -1,2 +1,2 @@
 #!/bin/bash
-rmdir -p *.js
+find *.js | rm
