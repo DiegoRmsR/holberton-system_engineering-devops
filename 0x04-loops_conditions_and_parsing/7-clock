@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+#Script that print hours
+hour=0
+while [ $hour -le 12 ]
+do
+    min=1
+    echo "Hour: $hour"
+    while [ $min -le 59 ]
+    do
+	echo $min
+	min=$((min+1))
+    done
+    hour=$((hour+1))
+done
