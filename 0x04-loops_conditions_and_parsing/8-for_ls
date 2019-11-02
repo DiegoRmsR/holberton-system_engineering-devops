@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+#Script that Print number interation
+flist="$(ls)"
+for i in $flist
+do
+    echo "$i" | cut -d "-" -f2
+done
