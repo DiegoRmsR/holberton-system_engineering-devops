@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+#Script that uses a until loop in bash
+i=0
+until [ $i -gt 9 ]
+do
+	echo "Holberton School"
+	((i++))
+done
