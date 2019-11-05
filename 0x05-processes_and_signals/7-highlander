@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+#Bash script that displays a message when receiving a SIGTERM signal
+trap 'echo "I am invincible!!!"' SIGTERM
+while :
+do
+    echo "To infinity and beyond"
+    sleep 2
+done
