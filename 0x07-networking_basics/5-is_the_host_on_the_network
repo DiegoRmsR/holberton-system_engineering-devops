@@ -1,4 +1,4 @@
-i#!/usr/bin/env bash
+#!/usr/bin/env bash
 # Script that look a ping 5 times
 if [ "$#" -ge 1 ]
 then
