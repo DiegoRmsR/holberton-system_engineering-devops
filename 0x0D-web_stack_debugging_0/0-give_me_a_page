@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Apache restart to view the changes
+
+sudo service apache2 restart
