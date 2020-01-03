@@ -2,7 +2,7 @@
 # bash script that install and configure HAproxy in a load balancer
 
 sudo apt-get -y update
-sudo apt-get -y install haproxy=1.6.\*
+sudo apt-get -y install haproxy=2.0.\*
 echo "backend web-backend
     frontend web-front
     bind*:80
