@@ -1,8 +1,10 @@
 #!/usr/bin/env bash
 # bash script that install and configure HAproxy in a load balancer
 
+sudo apt-get -y upgrade
 sudo apt-get -y update
-sudo apt-get -y install haproxy=2.0.\*
+sudo apt-get -y install haproxy
+sudo cp /etc/haproxy/haproxy.cfg /etc/haproxy/haproxy.cfg.default
 echo "backend web-backend
     frontend web-front
     bind*:80
