@@ -1,5 +1,5 @@
-i#!/usr/bin/env bash
-# Delete the port [::]:8080 and leave only the 80
+#!/usr/bin/env bash
+# Delete the port
 
 sudo sed -i "s/listen 8080 default_server/listen 80 default_server/i" /etc/nginx/sites-enabled/default
 sudo sed -i "s/listen \[::\]:8080 default_server/listen [::]:80 default_server/i" /etc/nginx/sites-enabled/default
