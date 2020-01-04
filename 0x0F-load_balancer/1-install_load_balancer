@@ -1,12 +1,11 @@
 #!/usr/bin/env bash
 # bash script that install and configure HAproxy in a load balancer
 
-sudo apt-get -y update
 sudo apt-get install software-properties-common
 sudo add-apt-repository ppa:vbernat/haproxy-2.0
 sudo apt-get -y update
-sudo apt-get -y install haproxy 2.0.\*
-echo "listen appname
+sudo apt-get -y install haproxy=2.0.\*
+echo -e "listen appname
         bind *:80
         mode http
         balance roundrobin
