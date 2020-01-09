@@ -5,5 +5,5 @@ pkill apache2
 chmod 644 /etc/nginx/nginx.conf
 sudo sed -i "s/listen 80 default_server/listen 8080 default_server/i" /etc/nginx/sites-enabled/default
 sudo sed -i "s/listen \[::\]:80 default_server/listen [::]:8080 default_server/i" /etc/nginx/sites-enabled/default
-sudo sed -i '1i user nginx;' /etc/nginx/nginx.conf
+sudo sed -i '1i\\n user nginx;' /etc/nginx/nginx.conf
 su nginx -c "service nginx restart"
