@@ -4,18 +4,22 @@ import json
 import requests
 
 
+import json
+import requests
+
+
 if __name__ == "__main__":
+    """ Main method """
     url = "https://jsonplaceholder.typicode.com/"
-    user = "{}users/".format(url)
-    users_dict = requests.get(user).json()
+    users_dict = requests.get('{}users/'.format(url)).json()
     user_task = {}
     for user in users_dict:
         user_name = user.get('username')
         user_id = user.get('id')
-        todos = "{}todos?userId={}".format(api_url, user_id))
-        todo_dict = requests.get(todos).json()
+        todos = '{}todos?userId={}'.format(url, user_id)
+        total_dict = requests.get(todos).json()
         c_tasks = []
-        for task in todo_dict:
+        for task in total_dict:
             dict_task = {"username": user_name,
                          "task": task.get("title"),
                          "completed": task.get("completed")}
@@ -23,5 +27,5 @@ if __name__ == "__main__":
 
             user_task[str(user_id)] = c_tasks
             filename = "todo_all_employees.json"
-            with open(filename, 'w') as f:
+            with open(filename, mode='w') as f:
                 json.dump(user_task, f)
