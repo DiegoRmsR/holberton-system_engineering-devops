@@ -2,12 +2,11 @@
 """ Python script to export data in the JSON format."""
 import json
 import requests
-import sys
 
 
 if __name__ == "__main__":
-    url = 'https://jsonplaceholder.typicode.com/'
-    user = '{}users/'.format(url)
+    url = "https://jsonplaceholder.typicode.com/"
+    user = "{}users/".format(url)
     users_dict = requests.get(user).json()
     user_task = {}
     for user in users_dict:
