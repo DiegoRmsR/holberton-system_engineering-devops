@@ -20,7 +20,7 @@ if __name__ == "__main__":
         if elem.get("completed") is True:
             done_tasks.append(elem)
 
-    print("Employee {} is done with tasks({}/{})"
+    print("Employee {} is done with tasks({}/{}):"
           .format(name, len(done_tasks), len(total_tasks)))
 
     for task in done_tasks:
