@@ -6,16 +6,16 @@ import requests
 
 if __name__ == "__main__":
     """ Main method """
-    url = "https://jsonplaceholder.typicode.com/"
-    users_dict = requests.get('{}users/'.format(url)).json()
+    api_url = "https://jsonplaceholder.typicode.com/"
+    users_dict = requests.get('{}users/'.format(api_url)).json()
     user_task = {}
     for user in users_dict:
         user_name = user.get('username')
         user_id = user.get('id')
-        todos = '{}todos?userId={}'.format(url, user_id)
-        total_dict = todos.get(todos).json()
+        todo_dict = requests.get('{}todos?userId={}'.format(api_url,
+                                                            user_id)).json()
         c_tasks = []
-        for task in total_dict:
+        for task in todo_dict:
             dict_task = {"username": user_name,
                          "task": task.get("title"),
                          "completed": task.get("completed")}
