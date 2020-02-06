@@ -13,7 +13,7 @@ if __name__ == "__main__":
         user_name = user.get('username')
         user_id = user.get('id')
         todos = '{}todos?userId={}'.format(url, user_id)
-        total_dict = requests.get(todos).json()
+        total_dict = todos.get(todos).json()
         c_tasks = []
         for task in total_dict:
             dict_task = {"username": user_name,
